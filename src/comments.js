@@ -16,7 +16,7 @@ function comments(state = [], action) {
             },
             ...state];
         case EDIT_COMMENT:
-            return state.comments.map(comment => {
+            return state.map(comment => {
                 if (comment.id === action.id) {
                     return Object.assign({}, comment, {
                         id: comment.id,
@@ -31,7 +31,7 @@ function comments(state = [], action) {
                 comment => comment.id !== action.id
             );
         case THUMB_DOWN_COMMENT:
-            return state.comments.map(comment => {
+            return state.map(comment => {
                 if (comment.id === action.id) {
                     return Object.assign({}, comment, {
                         id: comment.id,
@@ -42,7 +42,7 @@ function comments(state = [], action) {
                 return comment;
             });
         case THUMB_UP_COMMENT:
-            return state.comments.map(comment => {
+            return state.map(comment => {
                 if (comment.id === action.id) {
                     return Object.assign({}, comment, {
                         id: comment.id,
