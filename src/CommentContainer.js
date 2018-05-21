@@ -1,8 +1,9 @@
 import {connect} from 'react-redux';
 import Comment from './Comment';
-import {thumbUpComment, thumbDownComment} from './actions';
+import {removeComment, thumbUpComment, thumbDownComment} from './actions';
 
 const mapDispatchToProps = dispatch => ({
+    removeComment: (id) => dispatch(removeComment(id)),
     thumbUpComment: (id) => dispatch(thumbUpComment(id)),
     thumbDownComment: (id) => dispatch(thumbDownComment(id))
 });
