@@ -17,6 +17,12 @@ const Comment = ({
             <button onClick={() => removeComment(id)}>Remove</button>
             <button onClick={() => thumbUpComment(id)}>Thumb up</button>
             <button onClick={() => thumbDownComment(id)}>Thumb down</button>
+            <div
+                className='popupEditComment'
+                style={{display: 'none'}}
+            >
+
+            </div>
         </li>
     );
 };
