@@ -11,7 +11,6 @@ const Comment = ({
         <li>
             <textarea
                 value={text}
-                readOnly
                 style={opts}
             />
             <span>votes: {votes}</span>
